@@ -69,6 +69,74 @@ Example
 
 class Person:
   pass
+  
+
+
+# Instance Attributes vs. Static Attributes in Python Classes
+
+# Instance Attributes:
+
+Definition: Attributes specific to each instance of a class.
+
+Scope: Belong to individual objects created from the class.
+
+Initialization: Typically defined within methods, like __init__, or added dynamically.
+
+Uniqueness: Hold data unique to each object.
+
+Access: Accessed and modified using dot notation (object.attribute).
+Example:
+
+class Car:
+
+    def __init__(self, color, model):
+    
+        self.color = color  # Instance attribute
+        
+        self.model = model  # Instance attribute
+
+car1 = Car("Red", "Toyota")
+
+car2 = Car("Blue", "Honda")
+
+print(car1.color)  # Output: Red
+
+print(car2.color)  # Output: Blue
+
+
+# Static Attributes:
+
+Definition: Attributes shared among all instances of a class.
+
+Scope: Defined within the class but outside any methods.
+
+Commonality: Common to all instances, changes reflect across all.
+
+Access: Accessed using the class name or through any instance.
+
+Example:
+
+class Car:
+    wheels = 4  # Static attribute
+
+car1 = Car()
+
+car2 = Car()
+
+print(car1.wheels)  # Output: 4
+
+print(car2.wheels)  # Output: 4
+
+Car.wheels = 6  # Modifying static attribute
+
+print(car1.wheels)  # Output: 6
+
+print(car2.wheels)  # Output: 6
+
+
+Instance Attributes: Unique to each object, defined within methods, accessed with dot notation.
+
+Static Attributes: Shared among all instances, defined outside methods, accessed using class name.
 
 # Python Inheritance
 
